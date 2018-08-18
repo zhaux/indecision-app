@@ -1,0 +1,234 @@
+Lecture 2
+- why should you learn React?
+	- small learning curve (builds on JavaScript)
+	- good community
+	- React library
+		- core of React is the idea of a component
+		- component: piece of user interface
+		- reusable, easy to build, easy to debug, easy to test
+		- React algorithms are really fast
+
+
+Lecture 6
+- build the Indecision app
+	- learn JSX (JavaScript XML), templating language to build the UI for all of the components
+
+
+Lecture 7
+- live-server module
+	- development web server
+	- features like live reload
+
+
+Lecture 8
+- JSX: JavaScript syntax extension
+	- provided by React
+- Babel: JavaScript compiler
+	- takes features from ES6/ES7 and compiles down to ES5 code
+	- takes JSX code and compiles it to ES5 code
+
+
+Lecture 9 (babel and dependencies setup)
+- /src/app.js: contains JSX
+- /scripts/app.js: auto-generated file with babel stuff
+- live-server public
+- babel src/app.js --out-file=public/scripts/app.js --presets=react,env --watch                                            
+- to reinstall dependencies: yarn install
+
+
+Lecture 10 (static JSX)
+- adjacent JSX elements must be wrapped in a root element 
+- for clarity, use () to wrap elements
+
+
+Lecture 11
+- dynamic JSX
+- JS expressions in {}
+
+
+Lecture 12 (conditional rendering/logic)
+- ES6 arrow functions
+- if JSX expression resolves to undefined, nothing shows up
+- conditional (ternary) operator (true ? 'this' : 'that')
+- JSX ignores undefined, null, booleans
+- logical 'and' operator:
+	- if the first value is truthy and the second value is truthy, it will return the second value
+	- if first value is false, it ignores the second value
+- ternary operator: use if you want to do 1 of 2 things
+- logical 'and' operator: use if just want to do one thing or nothing at all
+
+
+Lecture 13 (ES6 const, let)
+- var has weird quirks and easy to misuse/abuse:
+	- you are able to redefine/reassign a variable that is already in use without any errors (cannot redefine with let)
+	- with const, you cannot even reassign it
+	- var, let, const are function scoped
+	- however, let and const are block scoped (if statements, for loops)
+- future order:
+	- const first
+	- let if needed
+	- var never
+
+
+Lecture 14 (ES6 arrow function part 1)
+- new syntax for creating functions
+- arrow functions are always anonymous (must assign to a variable)
+	- const add = (a, b) => {
+		return a + b
+	};
+- arrow functions have a new syntax if the return is just one statement (return statement right after the =>) (implicitly return)
+	- const add = (a, b) => a + b
+
+
+Lecture 15 (ES6 arrow function part 2)
+- arrow functions vs ES5 functions differ more than just syntax
+- arrow functions:
+	- 'arguments' object is no longer bound
+	- 'this' keyword is no longer bound
+- no reason to use 'function' anymore
+- map vs forEach:
+	- forEach lets you do something to each element (like print)
+	- map lets you transform each item, getting new array back
+	- map does not affect the original array at all
+
+
+Lecture 16 (Events and Attributes)
+- some attributes from HTML work exactly the same way, others got renamed
+- ex. class -> className (b/c class is a reserved word for classes in ES6)
+- can set attributes as a JS expression i.e id={expression} 
+
+
+Lecture 17 (Manual Data Binding)
+- JSX does not have built in data binding
+- need to rebuild template and render again on data change
+- React is super efficient:
+	- uses virtual DOM algorithms in JS to determine the minimal number of changes needed to be made in order to correctly render the new application
+
+
+Lecture 18 (Forms and Inputs)
+- e.preventDefault(): to prevent form submit from doing a full page reload
+- e.target.elements.option.value: to get value of text field
+
+
+Lecture 19 (Arrays in JSX)
+- arrays are supported by JSX
+- can have array of JSX instead JSX
+- use 'map' to build array of JSX expressions
+- each element must have 'key' attribute so that React knows what element might be changed during new render
+
+
+Lecture 23 (Thinking in React)
+- breaking things up into components (small reusable chunks)
+- ex. twitter header (<Header />)
+- ES6 class syntax
+
+
+Lecture 24 (ES6 Classes - Part 1)
+- each class is like a blueprint
+- class keyword
+- new keyword to make new instance of class
+- define constructors for the class
+- ES6 method definition syntax - consturctor (unique name, gets implicitly called when you make a new instance)
+	- ex: constructor() {
+    	}
+- can set default arguments by using =
+- ES6 template strings: ex. `Hi. I am ${ this.name }`
+	- no more needs for manual string concatenations
+
+
+Lecture 25 (ES6 Classes - Part 2)
+- subclasses
+- super keyword is used to call parent constructor function
+
+
+Lecture 26 (Creating a React Component)
+- class XX extends React.Component
+- class name must start with capital letter
+- React components must have method 'render'
+
+
+Lecture 27 (Nesting Components) 
+- components can render other components
+
+
+Lecture 28 (Component Props)
+- props: passing data in our components (very similar as arguments)
+- this.props
+
+Lecture 29 (Events & Methods)
+
+Lecture 30 (Method Binding)
+- bind keyword
+- can use the first argument to set the 'this' context
+- event handlers used when you lose the 'this' binding
+
+
+Lecture 31 (Component State)
+- 1. setup default state object
+- 2. component rendered with default state values*
+- 3. change state based on event
+- 4. component re-rendered with new state values*
+- 5. start again at (3) 
+
+
+Lecture 32 (Adding State to Counter App: Part 1)
+
+
+Lecture 33 (Adding State to Counter App: Part 2)
+- this.setState
+- only return state that you want to change
+
+
+Lecture 34 (Alternative setState Syntax)
+- old method (might be obsolete in later versions): can pass an object instead of a function as setState parameters
+- this.setState is ASYNC
+- don't use this method
+
+
+Lecture 35 (Build It: Adding State to Visibility Toggle)
+
+
+Lecture 36 (Indecision State: Part 1)
+- reverse data flow (child -> parent)
+- possible for parent to pass new prop values
+
+
+Lecture 37 (Indecision State: Part 2)
+
+
+Lecture 38 (Summary: Props vs State)
+- props:
+    - an object
+    - can be used when rendering
+    - changes(from above) causes re-renders
+    - comes from above
+    - can't be changed by component itself
+- state:
+    - an object
+    - can be used when rendering
+    - changes causes re-renders
+    - defined in component itself
+    - can be changed by component itself
+
+
+Lecture 39 (Section Intro: Stateless Functional Components)
+- stateless functional components vs class based components
+
+
+Lecture 40 (The Stateless Functional Component)
+- alternative to previous class based components
+- cannot use 'this' (like arrow functions)
+- pass props as first argument
+- faster than class based components b/c no overhead like React.Component
+- easier to test/read/write
+
+
+Lecture 41 (Default Prop Values)
+
+
+Lecture 42 (React Dev Tools)
+- chrome extension
+
+
+Lecture 43 (Removing Individual Options)
+- 
