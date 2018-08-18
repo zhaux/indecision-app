@@ -231,4 +231,28 @@ Lecture 42 (React Dev Tools)
 
 
 Lecture 43 (Removing Individual Options)
-- 
+
+
+Lecture 44 (Lifecycle Methods)
+- lifecycle methods: methods that are built-in to react components
+- cannot be used in stateless functional based components, only in class based components
+- componentDidMount: called when component gets rendered
+- componentDidUpdate: fired when component is updated (prop or state values changed)
+- componentWillUnmount: fired right before component goes away
+- more methods: facebook.github.io/react/docs/react-component.html
+
+
+Lecture 45 (Saving and Loading Options Data)
+- localStorage persists between page loads
+- localStorage can only save string data
+- use json to save string representation of non-string objects
+
+
+Lecture 46 (Saving and Loading the Count)
+
+
+Lecture 47 (Section Intro: Webpack)
+- webpack: asset bundler
+
+
+Lecture 48 (What is Webpack?)
