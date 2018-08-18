@@ -256,3 +256,61 @@ Lecture 47 (Section Intro: Webpack)
 
 
 Lecture 48 (What is Webpack?)
+- can break up application code to multiple files and use webpack to bundle everything together
+- use webpack to bundle all assets into one js file and load that js file via script tag
+-webpack can also run babel for us
+
+
+Lecture 49 (Avoid Global Modules)
+- global modules won't be in the package.json file
+- to run live-server/babel, use the "scripts" tag in package.json
+- yarn add live-server babel-cli@6.24.1
+- yarn run XX
+
+
+Lecture 50 (Installing & Configuring Webpack)
+- yarn add webpack@3.1.0
+- by default, webpack does nothing, need config file
+- webpack.config.js (node script)
+- need: where the entry point it, where to output final bundle file
+- 'bundle.js' very common name for webpack
+- output path must be absolute path, cannot use relative path (use __dirname + node('path'))
+
+
+Lecture 51 (ES6 import/export)
+- import + relative path of what you want to import
+- each file in webpack application maintains their own local scope (so need to use export)
+- use {} for import/export (NOT AN OBJECT)
+- need to specify named exports to import
+
+
+Lecture 52 (Default Exports)
+- each file (if chosed to) can have up to 1 default export
+- to import default export, include the name right before the {} + a comma ','
+- for default exports, naming is not important (can be anything you like)
+- no hard rule to what to export as default or named
+- 'export default' for in-line named export
+	- cannot be right before variable declaration
+	- reference it in new line
+
+
+Lecture 53 (Importing npm Modules)
+- yarn add validator@8.0.0
+- webpack will not include files that are not used in the application
+- yarn add react@16.0.0 react-dom@16.0.0
+- don't currently have babel connected to webpack so JSX will not work
+
+
+Lecture 54 (Setting up Babel with Webpack)
+- loader: allows you to customize the behaviour of webpack when it loads a file
+- yarn add babel-core@6.25.0 (allows you to run babel with tools like webpack)
+- yarn babel-loader@7.1.1 (webpack loader)
+- webpack modules->rules
+- need to make babel config file to tell it to use env,react presets (.babelrc)
+
+
+Lecture 55 (One Component per File)
+- put each component in its own file for scalability, maintence, testing, etc
+- for component file naming convention - use the same name as the component name
+- for each component, use default export because there's usually only one thing to export
+- for component imports, webpack does not need '.js' extension to find the file
