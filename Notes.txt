@@ -384,3 +384,10 @@ Lecture 66 (Reset that $%!*)
 
 Lecture 67 (Themeing with Variables)
 - SCSS variables must start with $
+
+
+Lecture 68 (Big Button & Options List)
+- sass has built-in functions (ex. darken())
+- BEM naming convention:
+	- element uses 2 underscores '__'
+	- modifiers use 2 hyphens '--'
