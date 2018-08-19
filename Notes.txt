@@ -372,3 +372,11 @@ Lecture 65 (Architecture and Header Styles)
 - BEM (block element modifier) naming convention
 	- css class naming convention
 	- ex. block (header), element (title) => .header__title
+
+
+Lecture 66 (Reset that $%!*)
+- CSS reset: 
+	- makes sure all browsers are starting from the same base
+	- removed built in styles that come from different browsers, OS, etc
+	- cross-browser friendly
+- yarn add normalize.css@7.0.0
