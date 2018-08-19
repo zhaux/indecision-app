@@ -380,3 +380,7 @@ Lecture 66 (Reset that $%!*)
 	- removed built in styles that come from different browsers, OS, etc
 	- cross-browser friendly
 - yarn add normalize.css@7.0.0
+
+
+Lecture 67 (Themeing with Variables)
+- SCSS variables must start with $
