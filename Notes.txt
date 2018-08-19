@@ -344,3 +344,7 @@ Lecture 60 (Passing Children to Component)
 
 Lecture 61 (Setting up React-Modal)
 - yarn add react-modal@2.2.2
+
+
+Lecture 62 (Bonus: Refactoring Other Stateless Functional Components)
+- can just implicity return our JSX in stateless functional components (without using 'return')
