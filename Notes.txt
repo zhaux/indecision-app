@@ -348,3 +348,8 @@ Lecture 61 (Setting up React-Modal)
 
 Lecture 62 (Bonus: Refactoring Other Stateless Functional Components)
 - can just implicity return our JSX in stateless functional components (without using 'return')
+
+
+Lecture 63 (Section Intro: Styling React)
+- focus on adding CSS using SCSS preprocessor
+- config webpack to compile SCSS to regular CSS
