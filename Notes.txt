@@ -363,3 +363,12 @@ Lecture 64 (Setting up Webpack with SCSS)
 
 
 Lecture 65 (Architecture and Header Styles)
+- when creating a separate scss that is loaded in, it's known as a 'partial' and file name starts with underscore '_'
+- when importing partial, leave off .scss extension and the underscore '_'
+- use rem instead of px (better support for accessibility)
+	- allows users to customize things (like global font size)
+	- 1rem = 16px
+	- convert html page to base 10 rem by font-size: 62.5%
+- BEM (block element modifier) naming convention
+	- css class naming convention
+	- ex. block (header), element (title) => .header__title
