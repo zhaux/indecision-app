@@ -343,3 +343,4 @@ Lecture 60 (Passing Children to Component)
 
 
 Lecture 61 (Setting up React-Modal)
+- yarn add react-modal@2.2.2
