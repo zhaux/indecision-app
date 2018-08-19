@@ -314,3 +314,32 @@ Lecture 55 (One Component per File)
 - for component file naming convention - use the same name as the component name
 - for each component, use default export because there's usually only one thing to export
 - for component imports, webpack does not need '.js' extension to find the file
+
+
+Lecture 56 (Source Maps with Webpack)
+- source maps make debugging much easier
+- webpack.config.js devtool
+- development webpack: cheap-module-eval-source-map
+
+
+Lecture 57 (Webpack Dev Server)
+- similar to live-server but has nice-to-have features specific to webpack
+- yarn add webpack-dev-server@2.5.1
+
+
+Lecture 58 (ES6 class Properties)
+- babel plugin (transform-class-properties)
+- new class properties syntax will not require class constructor method
+- yarn add babel-plugin-transform-class-properties@6.24.1
+- ability to create functions that won't have their bindings messed up
+
+
+Lecture 59 (Section Intro: Using a Third-Party Component)
+- use 3rd party react-module
+
+
+Lecture 60 (Passing Children to Component)
+- can pass JSX into component
+
+
+Lecture 61 (Setting up React-Modal)
