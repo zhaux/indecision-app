@@ -391,3 +391,6 @@ Lecture 68 (Big Button & Options List)
 - BEM naming convention:
 	- element uses 2 underscores '__'
 	- modifiers use 2 hyphens '--'
+
+
+Lecture 69 (Styling the Options List)
