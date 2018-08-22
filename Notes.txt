@@ -397,3 +397,6 @@ Lecture 69 (Styling the Options List)
 
 
 Lecture 70 (Styling Option Item)
+
+
+Lecture 71 (Styling React-Modal)
